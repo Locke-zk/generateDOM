@@ -27,15 +27,15 @@
     let reg2 = /\.\[(.*?)\]/g
     let tmp2 = ''
 
-    while ((tmp2 = reg2.exec(s)) !== null) {
-      tmp2[1].split(',').map(item => clas.push(item.trim()))
+    while ( ( tmp2 = reg2.exec( s ) ) !== null ) {
+      tmp2[ 1 ].split( ',' ).map( item => clas.push( item.trim() ) )
     }
 
     // 如果没有指定类，就返回空字符
-    if (!(reg1.test(s) || reg2.test(s))) {
+    if ( !( reg1.test( s ) || reg2.test( s ) ) ) {
       return ''
     } else {
-      return clas.join(' ')
+      return clas.join( ' ' )
     }
   }
 
